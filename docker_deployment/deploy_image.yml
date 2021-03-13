@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of Scientific Calculator
+  hosts: all
+  tasks:
+    - name: Pull image of Scientific Calculator
+      docker_image:
+        name: prateksha/scientific-cal-devops
+        source: pull
