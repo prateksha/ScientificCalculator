@@ -1,6 +1,6 @@
 ---
 - name: Pull docker image of Scientific Calculator
-  hosts: localhost
+  hosts: local
   connection: local
   vars:
     ansible_python_interpreter: /usr/bin/python2.7
