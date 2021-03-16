@@ -33,7 +33,13 @@ public class ScientificCalculator {
             else if (option == 3) {
                 double num1 = in.nextDouble();
                 double res = natural_log(num1);
-                System.out.println("Square root of " + num1 + " = " + res);
+                System.out.println("Natural log of " + num1 + " = " + res);
+            }
+            else if (option == 4) {
+                double num1 = in.nextDouble();
+                double num2 = in.nextDouble();
+                double res = pow(num1, num2);
+                System.out.println(num1 + " raised to " + num2 + " = " + res);
             }
             else if(option == 5)
                 break;
@@ -56,6 +62,11 @@ public class ScientificCalculator {
     public static double natural_log(double a) {
         logger.info("Computing natural log of " +a);
         double result = Math.log(a);
-        return a;
+        return result;
+    }
+    public static double pow(double a, double b) {
+        logger.info("Computing " + a + "raised to the power" +b);
+        double result = Math.pow(a, b);
+        return result;
     }
 }
