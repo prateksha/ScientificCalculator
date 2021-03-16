@@ -29,7 +29,12 @@ public class ScientificCalculator {
                 int num1 = in.nextInt();
                 int res = factorial(num1);
                 System.out.println("Factorial of " + num1 + " = " + res);
-            }            
+            }
+            else if (option == 3) {
+                double num1 = in.nextDouble();
+                double res = natural_log(num1);
+                System.out.println("Square root of " + num1 + " = " + res);
+            }
             else if(option == 5)
                 break;
         }
@@ -47,5 +52,10 @@ public class ScientificCalculator {
             result = result * i;
         }
         return result;
+    }
+    public static double natural_log(double a) {
+        logger.info("Computing natural log of " +a);
+        double result = Math.log(a);
+        return a;
     }
 }
