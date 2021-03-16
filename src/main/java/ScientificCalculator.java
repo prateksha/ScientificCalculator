@@ -25,15 +25,27 @@ public class ScientificCalculator {
                 double res = sqroot(num1);
                 System.out.println("Square root of " + num1 + " = " + res);
             }
-
+            else if (option == 2) {
+                int num1 = in.nextInt();
+                int res = factorial(num1);
+                System.out.println("Factorial of " + num1 + " = " + res);
+            }            
             else if(option == 5)
                 break;
         }
     }
 
     public static double sqroot(double a) {
-        double result = Math.sqrt(a);
         logger.info("Computing square root of " +a);
+        double result = Math.sqrt(a);
+        return result;
+    }
+    public static int factorial(int a) {
+        logger.info("Computing factorial of " +a);
+        int result = 1;
+        for(int i=1; i<=a; i++) {
+            result = result * i;
+        }
         return result;
     }
 }
