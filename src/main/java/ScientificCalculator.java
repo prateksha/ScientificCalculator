@@ -1,7 +1,11 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.lang.*;
 import java.util.*;
 
 public class ScientificCalculator {
+    private static final Logger logger = LogManager.getLogger(ScientificCalculator.class);
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         while (true) {
@@ -20,7 +24,6 @@ public class ScientificCalculator {
                 double num1 = in.nextDouble();
                 double res = sqroot(num1);
                 System.out.println("Square root of " + num1 + " = " + res);
-
             }
 
             else if(option == 5)
@@ -29,6 +32,8 @@ public class ScientificCalculator {
     }
 
     public static double sqroot(double a) {
-        return Math.sqrt(a);
+        double result = Math.sqrt(a);
+        logger.info("Computing square root of " +a);
+        return result;
     }
 }
