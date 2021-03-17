@@ -65,7 +65,7 @@ public class ScientificCalculator {
         return result;
     }
     public static double pow(double a, double b) {
-        logger.info("Computing " + a + "raised to the power" +b);
+        logger.info("Computing " + a + " raised to the power " +b);
         double result = Math.pow(a, b);
         return result;
     }
