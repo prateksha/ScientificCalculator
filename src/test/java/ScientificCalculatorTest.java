@@ -1,6 +1,6 @@
 import org.junit.*;
 
-public class ScientificCalculatorTests {
+public class ScientificCalculatorTest {
     private ScientificCalculator calculator;
 
     @Before
